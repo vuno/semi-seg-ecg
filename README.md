@@ -1,5 +1,64 @@
 # SemiSegECG: A Multi-Dataset Benchmark for Semi-Supervised Semantic Segmentation in ECG Delineation
-## Environments
+This is an official repository of __SemiSegECG__, <ins>a systematic multi-dataset benchmark suite for ECG delineation</ins>. 
+
+## Table of Contents
+- [__Overview__](#overview)
+- [__Features__](#features)
+- [__Installation__](#installation)
+- [__Benchmark Data__](#benchmark-data)
+  - [__Data Overview__](#data-overview)
+  - [__Download__](#download)
+  - [__Access Link__](#access-link)
+- [__Usage__](#usage)
+- [__License__](#license)
+- [__Citation__](#citation)
+
+## Overview
+
+<div align="center">
+  <img src="assets/deli-example.png" alt="Delineation example" width="60%">
+</div>
+
+ECG delineation (i.e., ECG segmentation) is a fundamental step in ECG monitoring, dividing signals into key waveform features. While deep learning models have shown effectiveness in this task, they are limited by scarce labeled data requiring labor-intensive, expert-driven annotation. Semi-supervised learning can bridge this gap by leveraging abundant unlabeled ECG data. SemiSegECG provides a standardized benchmark suite for ECG delineation.
+
+<div align="center">
+  <img src="assets/benchmark-design.png" alt="Benchmark design" width="95%">
+</div>
+
+__SemiSegECG__ consists of 5 public ECG databases (4 labeled, 1 unlabeled) and 5 representative vision-based semi-supervised semantic segmentation algorithms. Two benchmarking scenarios are considered:
+- __In-domain setting__: A typical use case where both labeled and unlabeled data come from the same source
+- __Cross-domain setting__: A more practical scenario involving heterogeneous sources across labeled, unlabeled, and potential test data
+
+Please see [our paper](https://arxiv.org/pdf/2507.18323) for detailed information and benchmarking results.
+
+
+## Features
+- __Datasets__
+  - [_LUDB_](https://www.physionet.org/content/ludb/1.0.1/) (labeled)
+  - [_QTDB_](https://physionet.org/content/qtdb/1.0.0/) (labeled)
+  - [_ISP_](https://zenodo.org/records/14679837) (labeled)
+  - [_Zhejiang_](https://figshare.com/collections/An_Novel_ECG_Database_to_Identify_Outflow_Tract_Origins_of_Idiopathic_Ventricular_Arrhythmia/4668086/2) (labeled)
+  - [_PTB-XL_](https://physionet.org/content/ptb-xl/1.0.1/) (unlabeled)
+- __Algorithm Implementations__
+  - [Mean Teacher (MT)](https://arxiv.org/pdf/1703.01780)
+  - [FixMatch](https://arxiv.org/pdf/2001.07685)
+  - [Cross Pseudo Supervision (CPS)](https://arxiv.org/pdf/2106.01226)
+  - [Regional Contrast (ReCo)](https://arxiv.org/pdf/2104.04465)
+  - [Self-Training++ (ST++)](https://arxiv.org/pdf/2106.05095)
+- __Networks__
+  - ResNet
+  - Vision Transformer
+  - FCN
+- __Augmentations__
+  - Random resized crop
+  - Amplitude scale
+  - Flip
+  - Mask (e.g., cutout) 
+  - Baseline shift
+  - Noise (e.g., powerline, sine, square, gaussian)
+
+
+## Installation
 ### Requirements
 - python 3.9
 - einops 0.6.0
@@ -14,7 +73,7 @@
 - tqdm
 - wfdb
 
-### Installation
+### Commands
 ```bash
 semi-seg-ecg$ conda create -n semi_seg_ecg python=3.9
 semi-seg-ecg$ conda activate semi_seg_ecg
@@ -22,7 +81,15 @@ semi-seg-ecg$ pip install -r requirements.txt
 ```
 
 ## Benchmark Data
-### Installation
+### Data Overview
+
+<div align="center">
+  <img src="assets/data-overview.png" alt="Database overview">
+</div>
+
+<sup>"12-lead": standard limb (I, II, III, aVR, aVL, aVF) + precordial (V1–V6) leads; "6-lead": limb-only; "2-lead": two selected leads (e.g., MLII); "lead-specific": separate onset-offset per lead; "integrated": single annotation across all leads.</sup>
+
+### Download
 We recommend using [`gdown`](https://github.com/wkentaro/gdown) command for the installation.
 
 ```bash
@@ -42,7 +109,8 @@ semi-seg-ecg$ gdown $FILE_ID -O $OUT_PATH
   semi-seg-ecg$ rm index/ludb.zip
   ```
 
-### Data
+### Access Link
+__ECG waveforms & annotations__
 | **Database** | **File ID**                              | **Download** |
 |--------------|-------------------------------------------|--------------|
 | *LUDB*       | 1qPAEmilpbSfCArhfDDKl1Vrqn4j89ZWK         | [link](https://drive.google.com/file/d/1qPAEmilpbSfCArhfDDKl1Vrqn4j89ZWK) |
@@ -51,7 +119,7 @@ semi-seg-ecg$ gdown $FILE_ID -O $OUT_PATH
 | *Zhejiang*   | 1EYTOrK5GhskO8ulwJyea6UKCFG4-UZ21         | [link](https://drive.google.com/file/d/1EYTOrK5GhskO8ulwJyea6UKCFG4-UZ21) |
 | *PTB-XL*     | 1zs8g5ivGImTctPYyfBx14b1JZhe0u53w         | [link](https://drive.google.com/file/d/1zs8g5ivGImTctPYyfBx14b1JZhe0u53w) |
 
-### Index
+__Index__
 | **Dataset** | **File ID** | **Download** |
 |-------------|-------------|--------------|
 | **In-domain setting** |||
