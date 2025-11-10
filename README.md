@@ -166,10 +166,19 @@ Do not distribute, modify, or use this code outside the scope permitted by the l
 
 If you find this work or code is helpful in your research, please cite:
 ```
-@article{park2025multi,
-  title={SemiSegECG: A Multi-Dataset Benchmark for Semi-Supervised Semantic Segmentation in ECG Delineation},
-  author={Park, Minje and Lim, Jeonghwa and Yu, Taehyung and Joo, Sunghoon},
-  journal={arXiv preprint arXiv:2507.18323},
-  year={2025}
+@inproceedings{10.1145/3746252.3760790,
+  author = {Park, Minje and Lim, Jeonghwa and Yu, Taehyung and Joo, Sunghoon},
+  title = {SemiSegECG: A Multi-Dataset Benchmark for Semi-Supervised Semantic Segmentation in ECG Delineation},
+  year = {2025},
+  isbn = {9798400720406},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3746252.3760790},
+  doi = {10.1145/3746252.3760790},
+  booktitle = {Proceedings of the 34th ACM International Conference on Information and Knowledge Management},
+  pages = {5099–5104},
+  numpages = {6},
+  location = {Seoul, Republic of Korea},
+  series = {CIKM '25}
 }
 ```
