@@ -1,6 +1,8 @@
 # SemiSegECG: A Multi-Dataset Benchmark for Semi-Supervised Semantic Segmentation in ECG Delineation
 This is an official repository of __SemiSegECG__, <ins>a systematic multi-dataset benchmark suite for ECG delineation</ins>. 
 
+Paper: https://dl.acm.org/doi/10.1145/3746252.3760790
+
 ## Table of Contents
 - [__Overview__](#overview)
 - [__Features__](#features)
@@ -29,7 +31,7 @@ __SemiSegECG__ consists of 5 public ECG databases (4 labeled, 1 unlabeled) and 5
 - __In-domain setting__: A typical use case where both labeled and unlabeled data come from the same source
 - __Cross-domain setting__: A more practical scenario involving heterogeneous sources across labeled, unlabeled, and potential test data
 
-Please see [our paper](https://arxiv.org/pdf/2507.18323) for detailed information and benchmarking results.
+Please see [our paper](https://dl.acm.org/doi/10.1145/3746252.3760790) for detailed information and benchmarking results.
 
 
 ## Features
