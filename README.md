@@ -135,6 +135,7 @@ __Index__
 **Note**: For detailed data preprocessing and generation of dataset split indices (i.e., train/validation/test), please refer to the code repository [here](https://github.com/jeonghwaimnida/Delineation_dataset).
 
 ## Usage
+### Training script
 ```bash
 semi-seg-ecg$ bash scripts/train.sh --help
 Usage: bash scripts/train.sh [options]
@@ -157,6 +158,28 @@ Please check the YAML files in the `configs` directory. These are the configurat
   > -f ../configs/base/fixmatch.yaml \
   > -o ../configs/bench/ludb/1over16.yaml
   ```
+
+### Model Checkpoints
+We provide model checkpoints trained on a cross-domain setting for reproduction and further research.
+For other configurations, please use our provided code or contact us at [minbak55@gmail.com].
+
+| **Algorithm** | **File ID** | **Download** |
+|-------------|-------------|--------------|
+| **ResNet-18** |||
+| **Supervised** | 1uGO-YHayjO4bWRnK4MzT0CMgaoUOgHB0 | [link](https://drive.google.com/file/d/1uGO-YHayjO4bWRnK4MzT0CMgaoUOgHB0) |
+| **MT**         | 1PunUIEsGjffxSipyE5QDGu5HYeIP7E9F | [link](https://drive.google.com/file/d/1PunUIEsGjffxSipyE5QDGu5HYeIP7E9F) |
+| **FixMatch**   | 1AuEBaNzm7z100VZBztPcknRY8rKdeSg4 | [link](https://drive.google.com/file/d/1AuEBaNzm7z100VZBztPcknRY8rKdeSg4) |
+| **CPS**        | 1pey2eB6jw55opMlcKiMtPLZaNuFdYO3d | [link](https://drive.google.com/file/d/1pey2eB6jw55opMlcKiMtPLZaNuFdYO3d) |
+| **ReCo**       | 1GBCTzRu3NSkWfzrwH6oNjCogjhkoPQzS | [link](https://drive.google.com/file/d/1GBCTzRu3NSkWfzrwH6oNjCogjhkoPQzS) |
+| **ST++**       | 108AnHQwSCrkrgbqwfLoGCbBXV7Jzh17G | [link](https://drive.google.com/file/d/108AnHQwSCrkrgbqwfLoGCbBXV7Jzh17G) |
+| **ViT-Tiny** |||
+| **Supervised** | 15XwxdlwpK9ldJJA8B44oYE2uXfZk3Hj6 | [link](https://drive.google.com/file/d/15XwxdlwpK9ldJJA8B44oYE2uXfZk3Hj6) |
+| **MT**         | 1RxOu4i8UIHLJDZehRI-tjtfuJFhJBE7D | [link](https://drive.google.com/file/d/1RxOu4i8UIHLJDZehRI-tjtfuJFhJBE7D) |
+| **FixMatch**   | 1kZ3boW1xQv7ZZABsfzit-zlO27LtlOzx | [link](https://drive.google.com/file/d/1kZ3boW1xQv7ZZABsfzit-zlO27LtlOzx) |
+| **CPS**        | 1g_Yo0BdU_Y1ABtFjhHDTrL9TDFJbmhcd | [link](https://drive.google.com/file/d/1g_Yo0BdU_Y1ABtFjhHDTrL9TDFJbmhcd) |
+| **ReCo**       | 1NB1J-6HrG8k5gG7PB_k0hdSiV73F-U9b | [link](https://drive.google.com/file/d/1NB1J-6HrG8k5gG7PB_k0hdSiV73F-U9b) |
+| **ST++**       | 16nF9okPSkd8tTnHiwbrNZrBjZkP6x2eH | [link](https://drive.google.com/file/d/16nF9okPSkd8tTnHiwbrNZrBjZkP6x2eH) |
+
 
 ## License
 © VUNO Inc. All rights reserved.
