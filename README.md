@@ -181,6 +181,10 @@ For other configurations, please use our provided code or contact us at [minbak5
 | **ST++**       | 16nF9okPSkd8tTnHiwbrNZrBjZkP6x2eH | [link](https://drive.google.com/file/d/16nF9okPSkd8tTnHiwbrNZrBjZkP6x2eH) |
 
 
+### Evaluation
+The evaluation code is available in the [jupyter notebook file](https://github.com/vuno/semi-seg-ecg/blob/main/notebooks/perf_eval.ipynb).
+Please note that the mIoUs in the paper were not from the `test_metrics.csv` generated after the experiment. __For reproduction, you should refer to the notebook.__
+
 ## License
 © VUNO Inc. All rights reserved.
  
